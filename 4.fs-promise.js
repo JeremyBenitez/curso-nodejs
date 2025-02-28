@@ -1,15 +1,14 @@
-const fs = require('node:fs')
-
+import { readFile } from 'node:fs/promises'
 console.log('leyendo el primer archivo...')
-fs.readFile('./archivo.txt', 'utf-8', (err, text) => { //se usa callback para indicar que evento se mostrara primero
-
-    console.log(text)
-})
+readFile('./archivo.txt', 'utf-8')
+    .then(text => {
+        console.log('primer texto:', text)
+    })
 
 console.log('Hacer algo mientras lee el archivo...')
 
 console.log('leyendo el segundo archivo...')
-fs.readFile('./archivo2.txt', 'utf-8', (err, text) => {
-    console.log(text)
-
-})
+readFile('./archivo2.txt', 'utf-8')
+   .then(text => {
+    console.log('segundo texto:', text)
+   })
