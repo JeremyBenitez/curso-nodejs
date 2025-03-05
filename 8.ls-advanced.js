@@ -1,6 +1,6 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
-const picocolors = require('picocolors')//es una libreria de npm que permite dar colores en la terminal y un formato
+const picocolors = require('picocolors')   //es una libreria de npm que permite dar colores en la terminal y un formato
 
 const folder = process.argv[2] ?? '.';
 
@@ -25,7 +25,7 @@ async function ls(folder) {
         const fileType = isDirectory ? 'd' : 'f';
         const fileSize = stats.size;
         const fileModified = stats.mtime.toLocaleDateString();
-        return `${picocolors.magenta(fileType)} ${picocolors.blue (file.padEnd(20))} ${picocolors.green (fileSize).toString()}.padStart(10) ${picocolors.bgCyan(fileModified)}`;
+        return `${picocolors.magenta(fileType)} ${picocolors.blue(file.padEnd(20))} ${picocolors.green(fileSize).toString()}.padStart(10) ${picocolors.bgCyan(fileModified)}`;
     });
 
     const filesInfo = await Promise.all(filesPromises);

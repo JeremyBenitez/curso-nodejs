@@ -24,5 +24,8 @@
   "homepage": "https://github.com/JeremyBenitez/curso-nodejs#readme",
   "dependencies": {
     "picocolors": "^1.1.1"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
