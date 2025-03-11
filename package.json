@@ -4,7 +4,9 @@
   "description": "curso para praticar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon 9.https.js",
+    "dev1": "nodemon 2.routing.js",
+    "dev2": "node --watch clase2/3.express.js"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,13 @@
   },
   "homepage": "https://github.com/JeremyBenitez/curso-nodejs#readme",
   "dependencies": {
+    "express": "4.21.2",
     "picocolors": "^1.1.1"
   },
   "eslintConfig": {
     "extends": "standard"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
